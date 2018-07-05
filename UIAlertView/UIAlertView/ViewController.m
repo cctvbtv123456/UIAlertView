@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+YCPopover.h"
+#import "PopViewController.h"
 
 @interface ViewController ()
 
@@ -16,9 +18,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+}
+- (IBAction)alert:(UIButton *)sender {
+    PopViewController *vc = [PopViewController new];
+    [self yc_centerPresentController:vc presentedSize:CGSizeMake(200, 300) completeHandle:^(BOOL presented) {
+        if (presented) {
+            NSLog(@"弹出了");
+        }else{
+            NSLog(@"消失了");
+        }
+    }];
 }
 
+- (IBAction)sheel:(UIButton *)sender {
+    PopViewController *vc = [PopViewController new];
+    [self yc_bottomPresentController:vc presentedHeight:220 completeHandle:^(BOOL presented) {
+        if (presented) {
+            NSLog(@"弹出了");
+        }else{
+            NSLog(@"消失了");
+        }
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

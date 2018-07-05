@@ -15,6 +15,11 @@
 		0456F08920EDE9FB003503DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F08820EDE9FB003503DA /* main.m */; };
 		0456F09320EDE9FB003503DA /* UIAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F09220EDE9FB003503DA /* UIAlertViewTests.m */; };
 		0456F09E20EDE9FB003503DA /* UIAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F09D20EDE9FB003503DA /* UIAlertViewUITests.m */; };
+		0456F0B320EDEA79003503DA /* UIViewController+YCPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F0AD20EDEA79003503DA /* UIViewController+YCPopover.m */; };
+		0456F0B420EDEA79003503DA /* YCPopoverAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F0AF20EDEA79003503DA /* YCPopoverAnimator.m */; };
+		0456F0B520EDEA79003503DA /* YCPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F0B220EDEA79003503DA /* YCPresentationController.m */; };
+		0456F0B920EDEAAC003503DA /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456F0B720EDEAAC003503DA /* PopViewController.m */; };
+		0456F0BA20EDEAAD003503DA /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456F0B820EDEAAC003503DA /* PopViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		0456F09920EDE9FB003503DA /* UIAlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIAlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0456F09D20EDE9FB003503DA /* UIAlertViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewUITests.m; sourceTree = "<group>"; };
 		0456F09F20EDE9FB003503DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0456F0AC20EDEA79003503DA /* UIViewController+YCPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YCPopover.h"; sourceTree = "<group>"; };
+		0456F0AD20EDEA79003503DA /* UIViewController+YCPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YCPopover.m"; sourceTree = "<group>"; };
+		0456F0AE20EDEA79003503DA /* YCPopoverAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCPopoverAnimator.h; sourceTree = "<group>"; };
+		0456F0AF20EDEA79003503DA /* YCPopoverAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCPopoverAnimator.m; sourceTree = "<group>"; };
+		0456F0B020EDEA79003503DA /* YCPopoverMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCPopoverMacro.h; sourceTree = "<group>"; };
+		0456F0B120EDEA79003503DA /* YCPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCPresentationController.h; sourceTree = "<group>"; };
+		0456F0B220EDEA79003503DA /* YCPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCPresentationController.m; sourceTree = "<group>"; };
+		0456F0B620EDEAAC003503DA /* PopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		0456F0B720EDEAAC003503DA /* PopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
+		0456F0B820EDEAAC003503DA /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +116,14 @@
 		0456F07820EDE9F9003503DA /* UIAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				0456F0AB20EDEA79003503DA /* YCPopoverCompont */,
 				0456F07920EDE9F9003503DA /* AppDelegate.h */,
 				0456F07A20EDE9F9003503DA /* AppDelegate.m */,
 				0456F07C20EDE9F9003503DA /* ViewController.h */,
 				0456F07D20EDE9F9003503DA /* ViewController.m */,
+				0456F0B620EDEAAC003503DA /* PopViewController.h */,
+				0456F0B720EDEAAC003503DA /* PopViewController.m */,
+				0456F0B820EDEAAC003503DA /* PopViewController.xib */,
 				0456F07F20EDE9F9003503DA /* Main.storyboard */,
 				0456F08220EDE9FB003503DA /* Assets.xcassets */,
 				0456F08420EDE9FB003503DA /* LaunchScreen.storyboard */,
@@ -130,6 +149,20 @@
 				0456F09F20EDE9FB003503DA /* Info.plist */,
 			);
 			path = UIAlertViewUITests;
+			sourceTree = "<group>";
+		};
+		0456F0AB20EDEA79003503DA /* YCPopoverCompont */ = {
+			isa = PBXGroup;
+			children = (
+				0456F0AC20EDEA79003503DA /* UIViewController+YCPopover.h */,
+				0456F0AD20EDEA79003503DA /* UIViewController+YCPopover.m */,
+				0456F0AE20EDEA79003503DA /* YCPopoverAnimator.h */,
+				0456F0AF20EDEA79003503DA /* YCPopoverAnimator.m */,
+				0456F0B020EDEA79003503DA /* YCPopoverMacro.h */,
+				0456F0B120EDEA79003503DA /* YCPresentationController.h */,
+				0456F0B220EDEA79003503DA /* YCPresentationController.m */,
+			);
+			path = YCPopoverCompont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0456F0BA20EDEAAD003503DA /* PopViewController.xib in Resources */,
 				0456F08620EDE9FB003503DA /* LaunchScreen.storyboard in Resources */,
 				0456F08320EDE9FB003503DA /* Assets.xcassets in Resources */,
 				0456F08120EDE9F9003503DA /* Main.storyboard in Resources */,
@@ -264,7 +298,11 @@
 			files = (
 				0456F07E20EDE9F9003503DA /* ViewController.m in Sources */,
 				0456F08920EDE9FB003503DA /* main.m in Sources */,
+				0456F0B420EDEA79003503DA /* YCPopoverAnimator.m in Sources */,
+				0456F0B320EDEA79003503DA /* UIViewController+YCPopover.m in Sources */,
+				0456F0B920EDEAAC003503DA /* PopViewController.m in Sources */,
 				0456F07B20EDE9F9003503DA /* AppDelegate.m in Sources */,
+				0456F0B520EDEA79003503DA /* YCPresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
